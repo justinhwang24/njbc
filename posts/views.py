@@ -3,8 +3,9 @@ from .models import Event
 
 # Create your views here.
 def index(request):
-    # evs = Event.objects.all()
-    return render(request, 'index.html')
+    evs = Event.objects.all()
+    context = {'events': evs}
+    return render(request, 'index.html', context)
 
 def events(request, pk):
     evs = Event.objects.get(id=pk)
