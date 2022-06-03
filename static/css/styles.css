@@ -155,6 +155,13 @@ image gallery
     margin-top: 4rem;
 }
 
+.section-image {
+    /* object-fit: cover; */
+    width: 20%;
+    height: auto;
+    /* margin-top: 4rem; */
+}
+
 /* Slideshow container */
 .slideshow-container {
     /* max-width: 1000px; */
@@ -284,6 +291,12 @@ image gallery
     margin: 0 auto;
     font-size: 1.1rem;
     /* box-shadow: var(--dark-shadow); */
+}
+
+.horizontal-section {
+    width: 30%;
+    height: 4rem;
+    display: grid;
 }
 
 .event-card {
