@@ -286,6 +286,12 @@ image gallery
     /* box-shadow: var(--dark-shadow); */
 }
 
+.event-card {
+    background-color: white;
+    padding: 120px;
+    /* margin-top: 20px; */
+ }
+
 /*
 =============== 
 Nav

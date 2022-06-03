@@ -93,9 +93,16 @@
 
           <div class="section white">
             <h2 class="section-header">Upcoming Events</h2>
-            <p class="text">
-              Upcoming Events
-            </p>
+            {% for event in events %}
+            <div class="event-card">
+              <a href="/events/{{event.id}}">
+                <h2>{{event.title}}</h2>
+                <h5>{{event.date}}</h5>
+                <h5>{{event.location}}</h5>
+                <p>{{event.details|truncatewords:20}}</p>
+              </a>
+            </div>
+            {% endfor %}
           </div>
 
           <div class="section gray">
