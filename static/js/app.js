@@ -1,20 +1,20 @@
 let slideIndex = 1;
-let sessionId = 0;
+var timeout;
 showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
-  sessionId++;
+  clearTimeout(timeout);
   showSlides(slideIndex += n);
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
-  sessionId++;
+  clearTimeout(timeout);
   showSlides(slideIndex = n);
 }
 
-function showSlides(n, temp) {
+function showSlides(n) {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
@@ -30,5 +30,5 @@ function showSlides(n, temp) {
   slideIndex++; 
   if (slideIndex > slides.length) {slideIndex = 1}
   if (slideIndex < 1) {slideIndex = slides.length}
-  setTimeout(showSlides, 4000);
+  timeout = setTimeout(showSlides, 4000);
 }
