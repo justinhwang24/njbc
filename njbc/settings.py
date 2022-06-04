@@ -77,11 +77,15 @@ WSGI_APPLICATION = 'njbc.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'd8mcd8vur1lk69',
+        'HOST': 'ec2-54-227-248-71.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'wurfftdfwfupdm',
+        'PASSWORD': '676cb93319748af80da06d1f4781f49f843673cd4f3fbce2421cf67e6308bcb1'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
