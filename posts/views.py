@@ -3,20 +3,22 @@ from .models import Event
 
 # Create your views here.
 def index(request):
-    # evs = Event.objects.all()
-    return render(request, 'index.html')
+    evs = Event.objects.all()
+    return render(request, 'index.html', {'events': evs})
+
+def about(request):
+    return render(request, 'about.html')
+
+def eventsAll(request):
+    evs = Event.objects.all()
+    return render(request, 'events.html', {'events': evs})
 
 def events(request, pk):
     evs = Event.objects.get(id=pk)
-    return render(request, 'events.html', {'events': evs})
-# def about(request):
-#     return render(request, 'about.html')
+    return render(request, 'eventsSingle.html', {'events': evs})
 
-# def events(request):
-#     return render(request, 'events.html')
-    
-# def staff(request):
-#     return render(request, 'staff.html')
+def staff(request):
+    return render(request, 'staff.html')
 
 # def socials(request):
 #     return render(request, 'socials.html')

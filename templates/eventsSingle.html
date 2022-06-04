@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <!-- <script data-main="scripts/app" src="scripts/require.js"></script> -->
+    <title>Bergen County Volleyball</title>
+
+    <!-- styles -->
+    <!-- <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="{% static 'css/events-styles.css' %}" />
+  </head>
+  <body>
+    <nav>
+      <div id="nav" class="nav-center">
+        <h4><a id="title" href="/">Bergen County Volleyball</a></h4>
+        <ul class="nav-links">
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/events">Events</a>
+          </li>
+          <li>
+            <a href="/staff">Staff</a>
+          </li>
+          <li>
+            <a href="/leaderboard">Leaderboard</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="section" id="section1">
+          <h2 class="section-header">Event #{{events.id}}</h2>
+            <div class="event-card">
+                <h2>{{events.date|date:"D"}}, {{events.date|date:"M"}} {{events.date|date:"j"}}, {{events.date|date:"o"}}</h2>
+                <h3 style="margin-top: 20px">{{events.title}} at {{events.time}}</h3>
+                <h4 style="margin-top: 20px; font-size: 1.1rem;">{{events.location}}</h4>
+                <p style="margin-top: 20px">{{events.details}}</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-center">
+            <h4>© 2022 NJBC Volleyball </h4>
+            <ul class="footer-links">
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="https://github.com/justinhwang24/njbc">GitHub</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- javascript -->
+  </body>
+</html>
