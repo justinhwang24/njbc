@@ -10,7 +10,7 @@ def about(request):
     return render(request, 'about.html')
 
 def aboutFounder(request):
-    return render(request, 'aboutFounder.html')
+    return render(request, 'about-founder.html')
 
 def eventsAll(request):
     evs = Event.objects.all()
