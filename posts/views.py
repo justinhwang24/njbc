@@ -9,6 +9,9 @@ def index(request):
 def about(request):
     return render(request, 'about.html')
 
+def aboutFounder(request):
+    return render(request, 'aboutFounder.html')
+
 def eventsAll(request):
     evs = Event.objects.all()
     return render(request, 'events.html', {'events': evs})

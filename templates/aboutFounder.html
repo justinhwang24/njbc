@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <!-- <script data-main="scripts/app" src="scripts/require.js"></script> -->
+    <title>Bergen County Volleyball</title>
+
+    <!-- styles -->
+    <!-- <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="{% static 'css/about-styles.css' %}" />
+  </head>
+  <body>
+    <nav>
+      <div id="nav" class="nav-center">
+        <h4><a id="title" href="/">Bergen County Volleyball</a></h4>
+        <ul class="nav-links">
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/events">Events</a>
+          </li>
+          <li>
+            <a href="/staff">Staff</a>
+          </li>
+          <!-- <li>
+            <a href="/leaderboard">Leaderboard</a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="white">
+
+          <div class="section white" id="section1">
+            <h2 class="section-header">Founder Greetings</h2>
+            <p class="text">
+                My fellow co-founders and I always wanted to create and maintain a volleyball 
+                community. To make this vision a reality, we first started with a simple 
+                Discord and now run tournaments. In the short time that our organization has 
+                been created, our community has grown to nearly 220 individuals.<br><br>
+
+                Our hope is that every single person (beginner, intermediate, or expert) 
+                can find our organization’s events a welcoming and hospitable community. 
+                We thank every member and team members’ cooperation and commitment to this 
+                cause.<br><br>
+
+                We hope that we can meet your expectations and hope that you will be able 
+                to join us. Once again, thank you for your continued support.<br><br>
+
+                Sincerely,<br>
+                Founder Issac Cho<br>
+                <img class="images" src="{% static 'assets/signature.png' %}">
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <footer>
+        <div class="footer-center">
+            <h4>© 2022 NJBC Volleyball </h4>
+            <ul class="footer-links">
+                <li>
+                  <a href="/about">About</a>
+                </li>
+                <li>
+                    <a href="https://github.com/justinhwang24/njbc">GitHub</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- javascript -->
+  </body>
+</html>
